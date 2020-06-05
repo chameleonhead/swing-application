@@ -6,33 +6,29 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
-/**
- * Hello world!
- *
- */
 public class App {
-    /**
-     * Create the GUI and show it. For thread safety, this method should be invoked
-     * from the event-dispatching thread.
-     */
+
     private static void createAndShowGUI() {
-        // Create and set up the window.
+        // Window を作成する
         final JFrame frame = new JFrame("Title");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        // パネルの追加
+        // (JFrame に直接ラベル・ボタンを設定するとどちらかしか表示されないのでパネルを追加する)
         final JPanel panel = new JPanel();
         frame.getContentPane().add(panel);
 
-        // Add the ubiquitous "Hello World" label.
+        // ラベルの追加
         final JLabel label = new JLabel("");
         panel.add(label);
 
+        // ボタンの追加
         final JButton button = new JButton("BUTTON");
         button.addActionListener(e -> label.setText("Hello, World"));
         panel.add(button);
 
-        // Display the window.
-        frame.pack();
+        // Windowを表示する
+        frame.setBounds(100, 100, 300, 200);
         frame.setVisible(true);
     }
 
