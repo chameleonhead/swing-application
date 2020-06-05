@@ -1,4 +1,4 @@
-package com.mycompany.app;
+package com.example.app;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
